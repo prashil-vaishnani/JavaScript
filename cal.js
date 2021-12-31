@@ -157,14 +157,14 @@ function Trigo() {
     else if (text === "Tan") {
         document.getElementById("ans").innerHTML = Math.tan(parseFloat(document.getElementById("ans").innerHTML))
     }
-    else if (text === "Cosec") {
-        document.getElementById("ans").innerHTML = (1 / Math.sin(parseFloat(document.getElementById("ans").innerHTML)))
+    else if (text === "Sinh") {
+        document.getElementById("ans").innerHTML = Math.sinh(parseFloat(document.getElementById("ans").innerHTML))
     }
-    else if (text === "Sec") {
-        document.getElementById("ans").innerHTML = (1 / Math.cos(parseFloat(document.getElementById("ans").innerHTML)))
+    else if (text === "Cosh") {
+        document.getElementById("ans").innerHTML = Math.cosh(parseFloat(document.getElementById("ans").innerHTML))
     }
-    else if (text === "Cot") {
-        document.getElementById("ans").innerHTML = (1 / Math.tan(parseFloat(document.getElementById("ans").innerHTML)))
+    else if (text === "Tanh") {
+        document.getElementById("ans").innerHTML = Math.tanh(parseFloat(document.getElementById("ans").innerHTML))
     }
 
 
