@@ -14,18 +14,21 @@
 
     <table>
         <tr>
-            <td colspan="5" class="text-align" id="ans">0</td>
+            <td colspan="5" rowspan="2" class="text-align" id="ans">0</td>
         </tr>
-        <tr class="color">
+        <tr>
+
+        </tr>
+        <tr>
             <td>DEG</td>
             <td>F-E</td>
         </tr>
-        <tr class="color">
+        <tr>
             <td>MC</td>
             <td>MR</td>
-            <td>M+</td>
-            <td>M-</td>
-            <td>MS</td>
+            <td class="text">M+</td>
+            <td class="text">M-</td>
+            <td class="text">MS</td>
         </tr>
         <tr>
             <td colspan="2">
@@ -41,10 +44,20 @@
                     </select>
                 </form>
             </td>
-            <td colspan="2" class="color">Function</td>
+            <td colspan="2">
+                <form>
+                    <select id="fun" onchange="Fun()">
+                        <option>Function</option>
+                        <option value="trunc">Trunc</option>
+                        <option value="ceil">Ceil</option>
+                        <option value="floor">Floor</option>
+                        <option value="round">Round</option>
+                    </select>
+                </form>
+            </td>
         </tr>
         <tr>
-            <td class="color">2<sup>nd</sup></td>
+            <td>2<sup>nd</sup></td>
             <td onclick="btnPie()">&#960</td>
             <td onclick="btnE()">e</td>
             <td id="clr" onclick="btnClear()">C</td>
@@ -59,36 +72,36 @@
         </tr>
         <tr>
             <td onclick="btnSqrt()"><sup>2</sup>&#8730</td>
-            <td class="color">(</td>
-            <td class="color">)</td>
+            <td>(</td>
+            <td>)</td>
             <td onclick="btnFactorial()">n!</td>
             <td onclick="btnOpration('/')">&#247</td>
         </tr>
         <tr>
             <td onclick="btnOpration('xtopowy')">x<sup>y</sup></td>
-            <td id="7" onclick="btnpress('7')">7</td>
-            <td id="8" onclick="btnpress('8')">8</td>
-            <td id="9" onclick="btnpress('9')">9</td>
+            <td class="text" id="7" onclick="btnpress('7')">7</td>
+            <td class="text" id="8" onclick="btnpress('8')">8</td>
+            <td class="text" id="9" onclick="btnpress('9')">9</td>
             <td onclick="btnOpration('*')">X</td>
         </tr>
         <tr>
             <td onclick="btnPow10()">10<sup>x</sup></td>
-            <td id="4" onclick="btnpress('4')">4</td>
-            <td id="5" onclick="btnpress('5')">5</td>
-            <td id="6" onclick="btnpress('6')">6</td>
+            <td class="text" id="4" onclick="btnpress('4')">4</td>
+            <td class="text" id="5" onclick="btnpress('5')">5</td>
+            <td class="text" id="6" onclick="btnpress('6')">6</td>
             <td onclick="btnOpration('-')">-</td>
         </tr>
         <tr>
             <td onclick="btnLog()">log</td>
-            <td id="1" onclick="btnpress('1')">1</td>
-            <td id="2" onclick="btnpress('2')">2</td>
-            <td id="3" onclick="btnpress('3')">3</td>
+            <td class="text" id="1" onclick="btnpress('1')">1</td>
+            <td class="text" id="2" onclick="btnpress('2')">2</td>
+            <td class="text" id="3" onclick="btnpress('3')">3</td>
             <td onclick="btnOpration('+')">+</td>
         </tr>
         <tr>
             <td onclick="btnLn()">ln</td>
             <td onclick="btnchangesign()"><sup>+</sup>/<sub>-</sub></td>
-            <td id="0" onclick="btnpress('0')">0</td>
+            <td class="text" id="0" onclick="btnpress('0')">0</td>
             <td id="dot" onclick="btnpress('.')">.</td>
             <td onclick="getAns()">=</td>
         </tr>

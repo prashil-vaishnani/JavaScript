@@ -179,3 +179,22 @@ function Trigo() {
 
 
 }
+
+function Fun() {
+    var select = document.getElementById("fun");
+    var text = select.options[select.selectedIndex].text;
+    if (text === "Trunc") {
+        document.getElementById("ans").innerHTML = Math.trunc(parseFloat(document.getElementById("ans").innerHTML))
+    }
+    else if (text === "Ceil") {
+        document.getElementById("ans").innerHTML = Math.ceil(parseFloat(document.getElementById("ans").innerHTML))
+    }
+    else if (text === "Floor") {
+        document.getElementById("ans").innerHTML = Math.floor(parseFloat(document.getElementById("ans").innerHTML))
+    }
+    else if (text === "Round") {
+        document.getElementById("ans").innerHTML = Math.round(parseFloat(document.getElementById("ans").innerHTML))
+    }
+
+
+}
