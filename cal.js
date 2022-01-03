@@ -3,6 +3,7 @@ let op1,
     opr,
     perform,
     flag = true;
+dot = true;
 
 function btnpress(val) {
     if (flag !== true) {
@@ -11,18 +12,25 @@ function btnpress(val) {
     }
     console.log("press:" + flag);
     opr = document.getElementById("ans").innerHTML;
-    if (parseInt(opr) === 0) {
-        opr = val;
-    } else {
-        opr = opr + val;
-    }
 
+    if (val === "." && dot !== false) {
+        opr = opr + val;
+        dot = false;
+    } else if (val === "." && dot === false) {
+    } else {
+        if (parseInt(opr) === 0 && dot !== false) {
+            opr = val;
+        } else {
+            opr = opr + val;
+        }
+    }
     console.log(opr);
     document.getElementById("ans").innerHTML = opr;
 }
 
 function btnOpration(opration) {
     perform = opration;
+    dot = true;
     op1 = document.getElementById("ans").innerHTML;
     document.getElementById("ans").innerHTML = 0;
 }
@@ -68,7 +76,9 @@ function getAns() {
 function btnClear() {
     document.getElementById("ans").innerHTML = 0;
     flag = true;
+    dot = true;
 }
+
 
 function btnDel() {
     document.getElementById("ans").innerHTML = document
