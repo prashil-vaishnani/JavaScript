@@ -198,3 +198,37 @@ function Fun() {
 
 
 }
+function btnMC() {
+
+
+}
+function btnMR() {
+
+}
+function btnMP() {
+
+}
+function btnMM() {
+
+}
+function btnMS() {
+
+}
+function btnDeg() {
+    let a = document.getElementById("dtor").innerHTML;
+    if (a === "DEG") {
+        let rad = document.getElementById("ans").innerHTML;
+        let degr = (rad * 180) / Math.PI;
+        document.getElementById("ans").innerHTML = degr;
+        document.getElementById("dtor").innerHTML = "RND";
+    }
+    else {
+        let degr = document.getElementById("ans").innerHTML;
+        let rad = (degr * Math.PI) / 180;
+        document.getElementById("ans").innerHTML = rad;
+        document.getElementById("dtor").innerHTML = "DEG";
+
+    }
+
+
+}
