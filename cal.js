@@ -119,7 +119,7 @@ function btnPie() {
     console.log(ans)
     document.getElementById("ans").innerHTML = (Math.PI) * (parseFloat(document.getElementById("ans").innerHTML))
 }
-
+/*     enter the number and then click the log,ln,e,exp button    */
 function btnLog() {
     document.getElementById("ans").innerHTML = Math.log10(
         parseFloat(document.getElementById("ans").innerHTML)
@@ -179,7 +179,7 @@ function Trigo() {
 
 
 }
-
+/* enter the value and select the function it directly gives values*/
 function Fun() {
     var select = document.getElementById("fun");
     var text = select.options[select.selectedIndex].text;
@@ -214,6 +214,7 @@ function btnMM() {
 function btnMS() {
 
 }
+/* enter the value and click on button to convert value to degree or vice versa*/
 function btnDeg() {
     let a = document.getElementById("dtor").innerHTML;
     if (a === "DEG") {
@@ -231,4 +232,8 @@ function btnDeg() {
     }
 
 
+}
+function btnFE() {
+    ans = parseFloat(document.getElementById("ans").innerHTML).toExponential();
+    document.getElementById("ans").innerHTML = ans;
 }
