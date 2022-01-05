@@ -3,48 +3,51 @@
 
 <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" href="#">
-    <script src="cal.js"></script>
-    <title>CALC</title>
+
+    <title>js_calc</title>
 </head>
 
 <body>
-
     <table>
-        <tr>
-            <td colspan="5" class="text-align" id="ans">0</td>
-        </tr>
 
         <tr>
-            <td onclick="btnDeg()" id="dtor">DEG</td>
+            <td colspan="5" class="whlStr txtGray" id="whlStr">
+                0
+            </td>
+        </tr>
+        <tr>
+            <td colspan="5" class="ans" id="ans">0</td>
+        </tr>
+        <tr>
+            <td id="dtor" onclick="btnDeg()">DEG</td>
             <td onclick="btnFE()">F-E</td>
         </tr>
         <tr>
-            <td onclick="btnMC()">MC</td>
-            <td onclick="btnMR()">MR</td>
-            <td class="text" onclick="btnMP()">M+</td>
-            <td class="text" onclick="btnMM()">M-</td>
-            <td class="text" onclick="btnMS()">MS</td>
+            <td class="txtGray">MC</td>
+            <td class="txtGray">MR</td>
+            <td>M+</td>
+            <td>M-</td>
+            <td>MS</td>
         </tr>
         <tr>
             <td colspan="2">
-                <form>
-                    <select id="fn" onchange="Trigo()">
-                        <option>Trigonometry</option>
-                        <option value="sin">Sin</option>
-                        <option value="cos">Cos</option>
-                        <option value="tan">Tan</option>
-                        <option value="sinh">Sinh</option>
-                        <option value="cosh">Cosh</option>
-                        <option value="tanh">Tanh</option>
-                    </select>
-                </form>
+                <select class="bdrWhite" onchange="Trigo()" id="selTrigo">
+                    <option>Trigonometry</option>
+                    <option value="sin">Sin</option>
+                    <option value="cos">Cos</option>
+                    <option value="tan">Tan</option>
+                    <option value="sinh">Sinh</option>
+                    <option value="cosh">Cosh</option>
+                    <option value="tanh">Tanh</option>
+                </select>
             </td>
+
             <td colspan="2">
                 <form>
-                    <select id="fun" onchange="Fun()">
+                    <select class="bdrWhite" id="fun" onchange="Fun()">
                         <option>Function</option>
                         <option value="trunc">Trunc</option>
                         <option value="ceil">Ceil</option>
@@ -53,57 +56,59 @@
                     </select>
                 </form>
             </td>
+
         </tr>
         <tr>
             <td>2<sup>nd</sup></td>
-            <td onclick="btnPie()">&#960</td>
-            <td onclick="btnE()">e</td>
-            <td id="clr" onclick="btnClear()">C</td>
-            <td onclick="btnDel()">DEL</td>
+            <td onclick="btnPie()" class="">&#960</td>
+            <td onclick="btnE()" class="">e</td>
+            <td id="clr" onclick="btnClear()" class="">C</td>
+            <td onclick="btnDel()" style="font-size: 30px;">&#11013;</td>
         </tr>
         <tr>
-            <td onclick="btnPower()">x<sup>2</sup></td>
-            <td onclick="btnInverse()">x<sup>-1</sup></td>
-            <td onclick="btnAbs()">|x|</td>
-            <td onclick="btnExp()">exp</td>
-            <td onclick="btnOpration('mod')">mod</td>
+            <td onclick="btnPower()" class="">x<sup>2</sup></td>
+            <td onclick="btnInverse()" class=""><sup>1</sup>/<sub>x</sub></td>
+            <td onclick="btnAbs()" class="">|x|</td>
+            <td onclick="btnExpo()" class="">exp</td>
+            <td onclick="btnOpration('mod')" class="">mod</td>
         </tr>
         <tr>
-            <td onclick="btnSqrt()"><sup>2</sup>&#8730</td>
+            <td onclick="btnSqrt()" class=""><sup>2</sup>&#8730<sub>x</sub></td>
             <td>(</td>
             <td>)</td>
-            <td onclick="btnFactorial()">n!</td>
-            <td onclick="btnOpration('/')">&#247</td>
+            <td onclick="btnFactorial()" class="">n!</td>
+            <td onclick="btnOpration('/')" class="">&#247</td>
         </tr>
         <tr>
-            <td onclick="btnOpration('xtopowy')">x<sup>y</sup></td>
-            <td class="text" id="7" onclick="btnpress('7')">7</td>
-            <td class="text" id="8" onclick="btnpress('8')">8</td>
-            <td class="text" id="9" onclick="btnpress('9')">9</td>
-            <td onclick="btnOpration('*')">X</td>
+            <td onclick="btnOpration('xy')" class="">x<sup>y</sup></td>
+            <td id="7" onclick="btnpress('7')" class="bld">7</td>
+            <td id="8" onclick="btnpress('8')" class="bld">8</td>
+            <td id="9" onclick="btnpress('9')" class="bld">9</td>
+            <td onclick="btnOpration('*')" class="">X</td>
         </tr>
         <tr>
-            <td onclick="btnPow10()">10<sup>x</sup></td>
-            <td class="text" id="4" onclick="btnpress('4')">4</td>
-            <td class="text" id="5" onclick="btnpress('5')">5</td>
-            <td class="text" id="6" onclick="btnpress('6')">6</td>
-            <td onclick="btnOpration('-')">-</td>
+            <td onclick="btnPower10()" class="">10<sup>x</sup></td>
+            <td id="4" onclick="btnpress('4')" class="bld">4</td>
+            <td id="5" onclick="btnpress('5')" class="bld">5</td>
+            <td id="6" onclick="btnpress('6')" class="bld">6</td>
+            <td onclick="btnOpration('-')" class="">-</td>
         </tr>
         <tr>
-            <td onclick="btnLog()">log</td>
-            <td class="text" id="1" onclick="btnpress('1')">1</td>
-            <td class="text" id="2" onclick="btnpress('2')">2</td>
-            <td class="text" id="3" onclick="btnpress('3')">3</td>
-            <td onclick="btnOpration('+')">+</td>
+            <td onclick="btnLog()" class="">log</td>
+            <td id="1" onclick="btnpress('1')" class="bld">1</td>
+            <td id="2" onclick="btnpress('2')" class="bld">2</td>
+            <td id="3" onclick="btnpress('3')" class="bld">3</td>
+            <td onclick="btnOpration('+')" class="">+</td>
         </tr>
         <tr>
-            <td onclick="btnLn()">ln</td>
-            <td onclick="btnchangesign()"><sup>+</sup>/<sub>-</sub></td>
-            <td class="text" id="0" onclick="btnpress('0')">0</td>
-            <td id="dot" onclick="btnpress('.')">.</td>
-            <td onclick="getAns()">=</td>
+            <td onclick="btnLn()" class="">ln</td>
+            <td id="sign" onclick="changesign()" class=""><sup>+</sup>/<sub>-</sub></td>
+            <td id="0" onclick="btnpress('0')" class="bld">0</td>
+            <td id="dot" onclick="btnpress('.')" class="">.</td>
+            <td onclick="getAns()" style="background-color: aqua;">=</td>
         </tr>
     </table>
+    <script src="cal.js"></script>
 </body>
 
 </html>
